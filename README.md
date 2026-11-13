@@ -1,35 +1,35 @@
-# quant research lab
+# Research Before Risk
 
-围绕 quant research lab 主题开展的公开资料研究、方法和分析记录。
+**Strategy-research code and notes for checking data, assumptions and reproducibility before claiming a trading edge.**
 
-GitHub：[eli-ovops/quant-research-lab](https://github.com/eli-ovops/quant-research-lab)
+## What you will find
 
-## 内容
+Research material with its sources, assumptions and working trail kept available. Dated observations remain dated; a report or model is not proof of a current result.
 
-本次公开副本包含 1241 个来源文件。
+## Start here
 
-- [`ORIGINAL_README.md`](ORIGINAL_README.md)
-- [`detector.py`](detector.py)
-- [`evidence.py`](evidence.py)
-- [`leadlag_engine.py`](leadlag_engine.py)
-- [`leadlag_watch.py`](leadlag_watch.py)
-- [`monitor.py`](monitor.py)
-- [`qualification.py`](qualification.py)
-- [`replay.py`](replay.py)
-- [`screen_markets.py`](screen_markets.py)
-- [`screen_stream.py`](screen_stream.py)
+- [Original project guide](ORIGINAL_README.md)
+- [Project guide](strategy_system/README.md)
+- [Project guide](research/tradingagents-trial-20260929/README.md)
+- [Complete source inventory](SOURCE_MANIFEST.csv)
 
-文件类型：.py（987）、.md（212）、.txt（41）、.html（1）。
+## Current scope
 
-## 阅读方式
+This snapshot includes 1241 source files. Original media, databases, private account records and other unprocessed attachments were not included in this text-and-source release.
 
-按主题说明、研究记录和相关程序阅读；保留当时的探索状态与已知缺口。
+This update improves the English presentation. It does not rerun the project, install a skill, reproduce an old test, or establish production readiness. Some original working documents retain their source language; machine-specific paths or setup assumptions may still need adaptation.
 
-## 来源与许可
+Market and protocol material is research, not a claim of verified live trading performance or future returns.
 
-本仓库新增介绍及用户原创部分按 MIT 许可公开；第三方材料按其各自许可证和署名使用，不以本许可证重新授权第三方内容。
+## Sources and license
 
-来源文件中记录的公开 GitHub 链接（不表示已逐项独立验证）：
+The owner's original contributions and new presentation notes follow the [retained license](LICENSE). Third-party material keeps its own licenses and attribution; this does not relicense it.
+
+<details>
+<summary>Reference links retained from the source notes</summary>
+
+These links were present in the project material; they have not all been independently reviewed.
+
 - https://github.com/LuckyOne7777/LLM-Trading-Lab
 - https://github.com/Polymarket/neg-risk-ctf-adapter/blob/main/src/NegRiskAdapter.sol
 - https://github.com/TauricResearch/TradingAgents
@@ -45,10 +45,6 @@ GitHub：[eli-ovops/quant-research-lab](https://github.com/eli-ovops/quant-resea
 - https://github.com/quantskills/skill-backtesting-bias-avoidance
 - https://github.com/wshobson/agents/tree/main/plugins/quantitative-trading/skills/backtesting-frameworks
 
-## 当前状态与验证边界
+</details>
 
-- 本次完成公开副本整理和静态检查；没有运行来源代码、构建 App、安装 Skill 或启动服务。
-- 项目可能处于原型、实验或研究阶段；没有将其表述为生产交付、客户验收或经过验证的投资收益。
-- 图片、视频、数据库、真实账户记录及未确认可公开的附件没有随本次文本/源码副本上传。
-- 部分相对链接、运行依赖或素材可能仍需补齐；原始快照中的静态引用缺口数为 0，该数字不是运行失败数。
-- [本次来源文件清单](SOURCE_MANIFEST.csv)
+[Source paths and hashes](SOURCE_MANIFEST.csv)
