@@ -1,0 +1,148 @@
+{
+  "phase": "preseal",
+  "scenarios": 18,
+  "main": [
+    {
+      "period": "development",
+      "variant": "main",
+      "start": "2020-01-01",
+      "end": "2022-12-31",
+      "positions_unresolved": false,
+      "cash_realized_pnl": 6806.024920299,
+      "remaining_positions": {},
+      "net_pnl": 6806.024920299,
+      "return_full_2000": 3.4030124601495,
+      "trades": 27,
+      "max_drawdown": 0.2191247964535702,
+      "longest_underwater_days": 481,
+      "unrecovered_days_at_end": 481,
+      "worst_day": -0.12841960803758123,
+      "worst_trade_usdt": -178.404782854,
+      "max_consecutive_losing_trades_exit_order": 5,
+      "max_holding_days": 165,
+      "top3_share_gross_gains": 0.7721659918088768,
+      "pnl_without_top3_winners": 713.2950870809991,
+      "annualized_daily_vol": 0.3154541131400806,
+      "mean_exposure": 0.24259140661148906,
+      "max_exposure": 0.8686273459899061,
+      "price_pnl": 6881.43263419,
+      "fees": 50.03672134200001,
+      "slippage_and_tick": 25.361917356399996,
+      "dust_writeoff": 0.009075192600000002,
+      "by_coin": {
+        "BTC": {
+          "pnl": 2824.863884279,
+          "trades": 14
+        },
+        "ETH": {
+          "pnl": 3981.161036019999,
+          "trades": 13
+        }
+      },
+      "overhead_scenarios": {
+        "0": 6806.024920299,
+        "60": 6625.860536737356,
+        "240": 6085.367386052425
+      },
+      "stress_exit_haircut10_max_usdt": 829.85877640563,
+      "stress_all_asset_USD_value20pct_loss_at_end": 1761.2049840598002,
+      "venue_total_loss_upper_usdt": 9825.693176732,
+      "excess_vs_hold_usdt": -813.6661055870009,
+      "excess_vs_exposure_hold_usdt": 4449.452224817,
+      "block_ci_vs_exposure_hold": {
+        "annual_arithmetic_excess": 0.10866559452910778,
+        "ci95": [
+          -0.4069842374451472,
+          0.647199723388553
+        ],
+        "block_days": 30,
+        "replicates": 1000,
+        "seed": 20260926,
+        "qualification": "paired circular-block descriptive interval, dependent regimes and model selection unknown; not confidence in executable future returns"
+      },
+      "block_ci_vs_cash": {
+        "annual_arithmetic_excess": 0.5434978314543328,
+        "ci95": [
+          0.1561416892954955,
+          1.0183215314059397
+        ],
+        "block_days": 30,
+        "replicates": 1000,
+        "seed": 20260926,
+        "qualification": "paired circular-block descriptive interval, dependent regimes and model selection unknown; not confidence in executable future returns"
+      },
+      "BTC_ETH_return_correlation": 0.8257597433012379
+    },
+    {
+      "period": "validation",
+      "variant": "main",
+      "start": "2023-01-01",
+      "end": "2024-12-31",
+      "positions_unresolved": false,
+      "cash_realized_pnl": 1029.178614882,
+      "remaining_positions": {},
+      "net_pnl": 1029.1786148820001,
+      "return_full_2000": 0.5145893074410002,
+      "trades": 24,
+      "max_drawdown": 0.2673340638927022,
+      "longest_underwater_days": 293,
+      "unrecovered_days_at_end": 293,
+      "worst_day": -0.0646328817038,
+      "worst_trade_usdt": -151.24122039,
+      "max_consecutive_losing_trades_exit_order": 6,
+      "max_holding_days": 91,
+      "top3_share_gross_gains": 0.46386373281358884,
+      "pnl_without_top3_winners": 156.91365065899993,
+      "annualized_daily_vol": 0.24054734923977647,
+      "mean_exposure": 0.3582602814683176,
+      "max_exposure": 0.84161679305028,
+      "price_pnl": 1088.4228124785004,
+      "fees": 39.452871891,
+      "slippage_and_tick": 19.7755313173,
+      "dust_writeoff": 0.0157943882,
+      "by_coin": {
+        "BTC": {
+          "pnl": 858.3066079820001,
+          "trades": 12
+        },
+        "ETH": {
+          "pnl": 170.87200690000003,
+          "trades": 12
+        }
+      },
+      "overhead_scenarios": {
+        "0": 1029.1786148820001,
+        "60": 909.0142313203563,
+        "240": 548.5210806354248
+      },
+      "stress_exit_haircut10_max_usdt": 251.93627560152,
+      "stress_all_asset_USD_value20pct_loss_at_end": 605.8357229764,
+      "venue_total_loss_upper_usdt": 3505.346676816,
+      "excess_vs_hold_usdt": -4107.0317062369995,
+      "excess_vs_exposure_hold_usdt": -509.3795721299998,
+      "block_ci_vs_exposure_hold": {
+        "annual_arithmetic_excess": -0.07298812073302999,
+        "ci95": [
+          -0.306821852828003,
+          0.1568817977808548
+        ],
+        "block_days": 30,
+        "replicates": 1000,
+        "seed": 20260926,
+        "qualification": "paired circular-block descriptive interval, dependent regimes and model selection unknown; not confidence in executable future returns"
+      },
+      "block_ci_vs_cash": {
+        "annual_arithmetic_excess": 0.2361374181159002,
+        "ci95": [
+          -0.11627632152825161,
+          0.636934538006537
+        ],
+        "block_days": 30,
+        "replicates": 1000,
+        "seed": 20260926,
+        "qualification": "paired circular-block descriptive interval, dependent regimes and model selection unknown; not confidence in executable future returns"
+      },
+      "BTC_ETH_return_correlation": 0.8052140556525615
+    }
+  ]
+}

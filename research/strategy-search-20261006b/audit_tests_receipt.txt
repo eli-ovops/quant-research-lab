@@ -1,0 +1,11 @@
+test_continuous_balance_dust_cooldown_and_caps (test_audit.AuditTests) ... ok
+test_full_map30_and_random720_multi_ledgers (test_audit.AuditTests) ... ok
+test_invalid_gate_spec_funding_and_missing_warmup (test_audit.AuditTests) ... ok
+test_martingale_three_losses_and_gain_reset (test_audit.AuditTests) ... ok
+test_proxy_precedence_short_and_funding_terminal (test_audit.AuditTests) ... ok
+test_tampered_reentry_budget_cash_atr_pnl_and_unknown (test_audit.AuditTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 6.673s
+
+OK

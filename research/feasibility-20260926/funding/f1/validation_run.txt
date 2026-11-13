@@ -1,0 +1,36 @@
+{
+  "at_utc": "2026-09-26T03:13:12.820051+00:00",
+  "original_artifact_hashes_unchanged": 201,
+  "raw_source_requests_new": 0,
+  "independent_entry_sizing_cash_inventory_cases": 108,
+  "independent_hourly_cash_inventory_valuations": 77868,
+  "independent_metric_sets": 108,
+  "max_hourly_cash_error": "0",
+  "scenarios_sign_changed": [],
+  "remaining_inventory_cases": 108,
+  "max_abs_net_pnl_delta": "0.001956639058442400000",
+  "max_abs_hourly_equity_delta": "0.002024042948706000000",
+  "max_abs_drawdown_delta": "0.001948846869252000000",
+  "current_snapshot_checks": [
+    {
+      "coin": "BTC",
+      "old_cost": "2.397788567873313",
+      "corrected_cost": "2.397829713000",
+      "cost_delta": "0.000041145126687",
+      "retained_base": "4.9E-10",
+      "retained_value": "0",
+      "full_quote_depth_check": "PASS"
+    },
+    {
+      "coin": "ETH",
+      "old_cost": "2.39821986577783",
+      "corrected_cost": "2.40011158000",
+      "cost_delta": "0.00189171422217",
+      "retained_base": "7.03E-7",
+      "retained_value": "0",
+      "full_quote_depth_check": "PASS"
+    }
+  ],
+  "cost_overlay_checks": 972,
+  "qualification": "Independent code within Owner B; C re-review and PMO acceptance pending. Conditional diagnostics only. Original seen results remain seen."
+}

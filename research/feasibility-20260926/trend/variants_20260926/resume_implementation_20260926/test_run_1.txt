@@ -1,0 +1,33 @@
+test_all_fixed_configurations_independent (test_engine.BoundaryTests) ... ok
+test_buy_invalid_quote_and_no_blind_retry (test_engine.BoundaryTests) ... ok
+test_current_and_future_excluded (test_engine.BoundaryTests) ... ok
+test_delay_queue_no_recheck (test_engine.BoundaryTests) ... ok
+test_gaps_warmup_confirmation_zero_invalid (test_engine.BoundaryTests) ... ok
+test_hold_delay_and_no_warmup_orders (test_engine.BoundaryTests) ... ok
+test_identity_and_synthetic_injection_guard (test_engine.BoundaryTests) ... ok
+test_known_risk_series (test_engine.BoundaryTests) ... ok
+test_mark_rejection_retains_risk (test_engine.BoundaryTests) ... ok
+test_minmax_amount_balance_rejections (test_engine.BoundaryTests) ... ok
+test_rejected_sell_retains_until_new_signal (test_engine.BoundaryTests) ... FAIL
+test_reset_period_cash (test_engine.BoundaryTests) ... ok
+test_sell_lot_dust_attribution (test_engine.BoundaryTests) ... ok
+test_sell_size_and_amount_rejections (test_engine.BoundaryTests) ... ok
+test_shared_cash_after_losses (test_engine.BoundaryTests) ... ok
+test_shared_cash_and_buy_base_fee (test_engine.BoundaryTests) ... ok
+test_strict_equality_no_entry (test_engine.BoundaryTests) ... ok
+test_terminal_duration_and_pending_cancel (test_engine.BoundaryTests) ... ok
+test_terminal_never_generates_new_intent (test_engine.BoundaryTests) ... ok
+test_terminal_rejection_unresolved_not_cash (test_engine.BoundaryTests) ... ok
+
+======================================================================
+FAIL: test_rejected_sell_retains_until_new_signal (test_engine.BoundaryTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/EXTERNAL/量化/research/feasibility-20260926/trend/variants_20260926/resume_implementation_20260926/test_engine.py", line 51, in test_rejected_sell_retains_until_new_signal
+    self.assertTrue(any(x['coin']=='BTC' and x['side']=='sell' and x['t']==f['start']+6*H for x in a['fills']))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.593s
+
+FAILED (failures=1)

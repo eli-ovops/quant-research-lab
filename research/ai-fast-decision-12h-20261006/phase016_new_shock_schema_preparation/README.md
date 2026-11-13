@@ -1,0 +1,15 @@
+# 阶段016：新成本冲击 schema 的离线准备
+
+V3.1有限离线格式/失败关闭层通过，8项必要测试PASS。真实历史例是旧job006 ETH asof113：未满足过去成本门槛、is_live=false，payload及sendable_payload均null，动作仅WAIT。合格状态只提供明确SYNTHETIC_NOT_MODEL_RUN例；没有模型调用、真实API时延/成绩或provider兼容性验收。
+
+独立版本stateV3_costshock / questionV3_costshock支持COST_CAPABLE_SHOCK_V1，不别名旧family。固定qualified_rule_sha=f3dbda015d9a600c9a9938d4a4eaa158a98719420c1fb979e72bd7d9f75b9cde、实际六币contract registry及新family都参与验证。旧015/009/其它seal源字节未修改，原严格Choice parser只作本目录副本；Decisions contract UNKNOWN、transport硬禁用。
+
+源/current/1s-reference携带实际run/conn/domain/boot/ordinal/shared/wall与原record内容hash、book原价量。工厂只消耗已收到的因果prefix，强制ordinal与OS序、同run/域；缺actual shared字段或参考/流不足直接拒绝，不能补造时钟。原record和packet盘口内容核对，精确flow witness逐tradeID/source去重及计价，重新核total/net/dominant/reference top5/两方向当前成本必要位移＋固定buffer/资格。聚合count不乘volume。它们均是过去量/必要成本代理，不是未来收益；完整市场/外部来源真实性仍受capture证据限制，hash并非外部认证或无漏采证明。
+
+payload禁止future_path、outcome、price_fee_delta、PnL等未来标签。未qualified不准备问题payload、只WAIT；qualified也不保证未来edge。所有发送仍被transport_disabled截断，history/stale门失败没有可调用payload。V3首版曾为history-qualified保留payload但gate=false，原code/freeze/tests/examples以v1_保留；审查后V3.1将它移到offline_draft_payload，payload=null、sendable_payload永远null，不修改策略参数。新冻结原件见execution_freeze。
+
+输入gate重核 source≤feature≤actualsend、源及最新book两条250ms TTL；计划时间与实际runtime开始/发送分开。响应gate核1000ms等待、response之后新quote的时间与ordinal、同binding及严格bool，confidence不代表胜率/不提高risk。必须明确执行层缺口：runtime new_book_shared_ns/ordinal/book_valid目前是声明；尚未将实际新book内容hash、价格深度、原容量和撮合绑定。这是离线时钟/格式准备，不是实际新盘口验证、下单授权或完成撮合。后续真实执行需要另一个有限证据层，不能把当前FOLLOW fixture当真实订单。
+
+8测试含版本/公式、missing/ns、未来字段/旧family alias、run/domain/raw内容、flow witness未来或伪总额、历史/不合格/stale仅草稿、actual late send TTL、bool/timeout、新book ordinal及严格parser/禁transport。数值/时间与response fixture均明确SYNTHETIC_NOT_MODEL_RUN，不计算mock API时延。有限不同字段实现从原gzip前113行核actual源及current/ref原价量和1s exactflow，并核draft隔离；不是第三方全pipeline回放。
+
+当前job007 PID51279/session62552仍唯一有限采集，21:05:47.126782UTC截止，live不读收益；不启动副本、不改collector。schema freeze晚于该源起采，不能冒称其全段是schema前向实测。总12h目标ACTIVE；后续017需源真实terminal/全gzip验收后才执行固定价费评价，实际AI仍null。

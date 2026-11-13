@@ -1,0 +1,1 @@
+{"phase": "all", "scenarios": 27, "hashes": 47, "max_error": 0.0}

@@ -1,0 +1,15 @@
+Captured evidence from successful executions during B-v1 (not economic-performance acceptance):
+
+test_base_fee_and_rounding ... ok
+test_boundary_and_independent_cash ... ok
+test_deep_book_units_and_exhaustion ... ok
+test_missing_bar_rejected_and_margin_not_spot_credit ... ok
+test_negative_boundaries_and_no_future_signal ... ok
+test_variable_notional_and_negative_bound ... ok
+Ran 6 tests in 0.003s — OK
+
+Preseal:72 scenarios,0 failures. Final:108 scenarios,0 failures. Source hashes checked:162.
+Independent validator:108 raw cashbooks;546 funding formula rows;maxabs cash error0E-21.
+Each of6 hourly series has all2162 required timestamps;each coin has271 settlement boundaries at8h spacing.
+Details/time and source-level checks: validation.json.
+C independent review and PMO acceptance are PENDING.

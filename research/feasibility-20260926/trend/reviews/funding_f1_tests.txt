@@ -1,0 +1,14 @@
+test_below_min_and_no_full_lot (__main__.ExitTests) ... ok
+test_current_snapshot_rejected_spot_keeps_inventory (__main__.ExitTests) ... ok
+test_dust_and_exact_lot (__main__.ExitTests) ... ok
+test_max_quantity_and_amount (__main__.ExitTests) ... ok
+test_missing_invalid_quote_preserves_position (__main__.ExitTests) ... ok
+test_multilevel_floor_before_capacity_and_no_partial_assumed (__main__.ExitTests) ... ok
+test_replay_all_cash_inventory_curve_and_benchmark (__main__.ExitTests) ... ok
+test_replay_min_rejection_preserves_full_inventory (__main__.ExitTests) ... ok
+test_variable_funding_and_no_future_signal_unchanged (__main__.ExitTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.003s
+
+OK

@@ -1,0 +1,244 @@
+[
+  {
+    "period": "early",
+    "coin": "BTC",
+    "period_start": "2020-01-01T00:00:00+00:00",
+    "period_end_exclusive": "2023-01-01T00:00:00+00:00",
+    "warmup_start_UTC": "2019-12-28T16:00:00+00:00",
+    "required_hours_with_warmup": 26384,
+    "missing": 0,
+    "invalid_or_unconfirmed": 0,
+    "zero_volume_hours": 12,
+    "zero_times": [
+      1585818000000,
+      1597309200000,
+      1654102800000,
+      1671354000000,
+      1671357600000,
+      1671361200000,
+      1671364800000,
+      1671368400000,
+      1671372000000,
+      1671375600000,
+      1671379200000,
+      1671382800000
+    ],
+    "OHLC_days": 0,
+    "base_days": 119,
+    "quote_days": 1010,
+    "quote2_days": 1010,
+    "compared_full_days_including_warmup": 1099,
+    "max_abs_volume_delta": [
+      "414.46491579000003",
+      "31456146.499849170",
+      "31456146.499849170"
+    ],
+    "max_relative_volume_delta": [
+      "0.03538615584407507296557386094",
+      "0.1297632665114287046717769776",
+      "0.1297632665114287046717769776"
+    ],
+    "outside_hypothetical_binary64_bound_by_field": [
+      119,
+      9,
+      9
+    ],
+    "hard_price_grid_confirmation_zero_gate_pass": false,
+    "original_protocol_full_gate": "FAIL",
+    "current_strict_implementation_gate": "FAIL",
+    "PnL_released": false
+  },
+  {
+    "period": "early",
+    "coin": "ETH",
+    "period_start": "2020-01-01T00:00:00+00:00",
+    "period_end_exclusive": "2023-01-01T00:00:00+00:00",
+    "warmup_start_UTC": "2019-12-28T16:00:00+00:00",
+    "required_hours_with_warmup": 26384,
+    "missing": 0,
+    "invalid_or_unconfirmed": 0,
+    "zero_volume_hours": 12,
+    "zero_times": [
+      1585818000000,
+      1597309200000,
+      1654102800000,
+      1671354000000,
+      1671357600000,
+      1671361200000,
+      1671364800000,
+      1671368400000,
+      1671372000000,
+      1671375600000,
+      1671379200000,
+      1671382800000
+    ],
+    "OHLC_days": 1,
+    "base_days": 121,
+    "quote_days": 1025,
+    "quote2_days": 1025,
+    "compared_full_days_including_warmup": 1099,
+    "max_abs_volume_delta": [
+      "3619.543964",
+      "7292694.72101062",
+      "7292694.72101062"
+    ],
+    "max_relative_volume_delta": [
+      "0.1557810532841629868781429884",
+      "0.1563657370924222001466610934",
+      "0.1563657370924222001466610934"
+    ],
+    "outside_hypothetical_binary64_bound_by_field": [
+      121,
+      460,
+      460
+    ],
+    "hard_price_grid_confirmation_zero_gate_pass": false,
+    "original_protocol_full_gate": "FAIL",
+    "current_strict_implementation_gate": "FAIL",
+    "PnL_released": false
+  },
+  {
+    "period": "middle",
+    "coin": "BTC",
+    "period_start": "2023-01-01T00:00:00+00:00",
+    "period_end_exclusive": "2025-01-01T00:00:00+00:00",
+    "warmup_start_UTC": "2022-12-28T16:00:00+00:00",
+    "required_hours_with_warmup": 17624,
+    "missing": 0,
+    "invalid_or_unconfirmed": 0,
+    "zero_volume_hours": 0,
+    "zero_times": [],
+    "OHLC_days": 0,
+    "base_days": 0,
+    "quote_days": 0,
+    "quote2_days": 0,
+    "compared_full_days_including_warmup": 734,
+    "max_abs_volume_delta": [
+      "0",
+      "0",
+      "0"
+    ],
+    "max_relative_volume_delta": [
+      "0",
+      "0",
+      "0"
+    ],
+    "outside_hypothetical_binary64_bound_by_field": [
+      0,
+      0,
+      0
+    ],
+    "hard_price_grid_confirmation_zero_gate_pass": true,
+    "original_protocol_full_gate": "PASS",
+    "current_strict_implementation_gate": "PASS",
+    "PnL_released": false
+  },
+  {
+    "period": "middle",
+    "coin": "ETH",
+    "period_start": "2023-01-01T00:00:00+00:00",
+    "period_end_exclusive": "2025-01-01T00:00:00+00:00",
+    "warmup_start_UTC": "2022-12-28T16:00:00+00:00",
+    "required_hours_with_warmup": 17624,
+    "missing": 0,
+    "invalid_or_unconfirmed": 0,
+    "zero_volume_hours": 0,
+    "zero_times": [],
+    "OHLC_days": 0,
+    "base_days": 0,
+    "quote_days": 0,
+    "quote2_days": 0,
+    "compared_full_days_including_warmup": 734,
+    "max_abs_volume_delta": [
+      "0",
+      "0",
+      "0"
+    ],
+    "max_relative_volume_delta": [
+      "0",
+      "0",
+      "0"
+    ],
+    "outside_hypothetical_binary64_bound_by_field": [
+      0,
+      0,
+      0
+    ],
+    "hard_price_grid_confirmation_zero_gate_pass": true,
+    "original_protocol_full_gate": "PASS",
+    "current_strict_implementation_gate": "PASS",
+    "PnL_released": false
+  },
+  {
+    "period": "latest",
+    "coin": "BTC",
+    "period_start": "2025-01-01T00:00:00+00:00",
+    "period_end_exclusive": "2026-07-01T00:00:00+00:00",
+    "warmup_start_UTC": "2024-12-28T16:00:00+00:00",
+    "required_hours_with_warmup": 13184,
+    "missing": 0,
+    "invalid_or_unconfirmed": 0,
+    "zero_volume_hours": 0,
+    "zero_times": [],
+    "OHLC_days": 0,
+    "base_days": 0,
+    "quote_days": 0,
+    "quote2_days": 0,
+    "compared_full_days_including_warmup": 549,
+    "max_abs_volume_delta": [
+      "0",
+      "0",
+      "0"
+    ],
+    "max_relative_volume_delta": [
+      "0",
+      "0",
+      "0"
+    ],
+    "outside_hypothetical_binary64_bound_by_field": [
+      0,
+      0,
+      0
+    ],
+    "hard_price_grid_confirmation_zero_gate_pass": true,
+    "original_protocol_full_gate": "PASS",
+    "current_strict_implementation_gate": "PASS",
+    "PnL_released": false
+  },
+  {
+    "period": "latest",
+    "coin": "ETH",
+    "period_start": "2025-01-01T00:00:00+00:00",
+    "period_end_exclusive": "2026-07-01T00:00:00+00:00",
+    "warmup_start_UTC": "2024-12-28T16:00:00+00:00",
+    "required_hours_with_warmup": 13184,
+    "missing": 0,
+    "invalid_or_unconfirmed": 0,
+    "zero_volume_hours": 0,
+    "zero_times": [],
+    "OHLC_days": 0,
+    "base_days": 0,
+    "quote_days": 0,
+    "quote2_days": 0,
+    "compared_full_days_including_warmup": 549,
+    "max_abs_volume_delta": [
+      "0",
+      "0",
+      "0"
+    ],
+    "max_relative_volume_delta": [
+      "0",
+      "0",
+      "0"
+    ],
+    "outside_hypothetical_binary64_bound_by_field": [
+      0,
+      0,
+      0
+    ],
+    "hard_price_grid_confirmation_zero_gate_pass": true,
+    "original_protocol_full_gate": "PASS",
+    "current_strict_implementation_gate": "PASS",
+    "PnL_released": false
+  }
+]

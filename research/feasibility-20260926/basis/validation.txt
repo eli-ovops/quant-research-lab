@@ -1,0 +1,40 @@
+{
+  "python": "3.9.6",
+  "source_hash_checks": 19,
+  "universe_count": 244,
+  "btc_eth_count": 22,
+  "eligible_count": 0,
+  "clock_server_midpoint_delta_ms": 157.5,
+  "clock_rtt_ms": 401,
+  "settlement_audits": [
+    {
+      "asset": "BTC",
+      "events": 4,
+      "sum_deltas": "2318.3854639472534819",
+      "direct_difference": "2318.3854639472534819",
+      "independent_identity": true,
+      "quantity": "normalized one base unit; not contract count or invested capital",
+      "historical_trade_pnl": "UNKNOWN"
+    },
+    {
+      "asset": "ETH",
+      "events": 4,
+      "sum_deltas": "107.6690371079529340",
+      "direct_difference": "107.6690371079529340",
+      "independent_identity": true,
+      "quantity": "normalized one base unit; not contract count or invested capital",
+      "historical_trade_pnl": "UNKNOWN"
+    }
+  ],
+  "synthetic_cash_identity_cases": 6,
+  "fee_rounding_residual_base": "9.98E-9",
+  "eligibility_boundary_tests": 5,
+  "decision": "INFEASIBLE_CURRENT_SPECIFIED_OKX_USDT_EXPIRY_VERSION",
+  "historical_profitability": "INSUFFICIENT_EVIDENCE",
+  "independent_trade_events": 0,
+  "real_orders": 0,
+  "heldout_completed_trades": 0,
+  "pnl_USDT": null,
+  "return_on_2000": null,
+  "note": "No eligible product. No bids/asks or future execution assumed. Price telescope audit is not trading return."
+}

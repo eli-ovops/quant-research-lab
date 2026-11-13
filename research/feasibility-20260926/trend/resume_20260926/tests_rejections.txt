@@ -1,0 +1,9 @@
+test_each_rejection_guard (__main__.RejectedExit) ... ok
+test_rejected_hold_benchmark (__main__.RejectedExit) ... ok
+test_rejected_then_later_sold (__main__.RejectedExit) ... ok
+test_terminal_rejection_retains_price_risk (__main__.RejectedExit) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK

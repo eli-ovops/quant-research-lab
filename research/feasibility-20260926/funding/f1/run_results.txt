@@ -1,0 +1,140 @@
+{
+  "phase": "all",
+  "scenarios": 108,
+  "failed": 0,
+  "hash_checks": 162,
+  "rate_summary": [
+    {
+      "coin": "BTC",
+      "first": "2026-06-28T00:00:00+00:00",
+      "last": "2026-09-25T16:00:00+00:00",
+      "observations_not_independent_trades": 270,
+      "negative": 17,
+      "zero": 0,
+      "sum_realized_rates_not_return": "0.0145656769679941",
+      "interval_hours": {
+        "8.0": 269
+      },
+      "formulaType": {
+        "withRate": 270
+      },
+      "method": {
+        "current_period": 270
+      },
+      "prediction_equals_realized_count": 270,
+      "point_in_time_prediction_archive": false
+    },
+    {
+      "coin": "ETH",
+      "first": "2026-06-28T00:00:00+00:00",
+      "last": "2026-09-25T16:00:00+00:00",
+      "observations_not_independent_trades": 270,
+      "negative": 46,
+      "zero": 0,
+      "sum_realized_rates_not_return": "0.0106896392528021",
+      "interval_hours": {
+        "8.0": 269
+      },
+      "formulaType": {
+        "withRate": 270
+      },
+      "method": {
+        "current_period": 270
+      },
+      "prediction_equals_realized_count": 270,
+      "point_in_time_prediction_archive": false
+    }
+  ],
+  "primary": [
+    {
+      "coin": "BTC",
+      "start": "2026-06-28",
+      "split": "development",
+      "net_pnl_proxy": "-0.637771221896561109687",
+      "funding_proxy": "3.461224663159938890313",
+      "price_pnl": "0.017314929760",
+      "fees": "2.4699305631913140",
+      "slippage": "1.6459543354931860",
+      "net_pnl_low_mark_boundary_only": "-0.648616337298381684184",
+      "net_pnl_high_mark_boundary_only": "-0.576216776963345959253",
+      "isolated_margin_min_buffer_current_mmr_stress": "706.133813084596447453068",
+      "funding_cost_recovery_days_ex_post_target": null,
+      "drawdown_usdt_hourly_proxy": "4.0370818201515000"
+    },
+    {
+      "coin": "BTC",
+      "start": "2026-07-28",
+      "split": "validation",
+      "net_pnl_proxy": "0.233380428573444081875",
+      "funding_proxy": "4.628450399484944081875",
+      "price_pnl": "0.067614229324",
+      "fees": "2.6776440583974740",
+      "slippage": "1.7844489884620260",
+      "net_pnl_low_mark_boundary_only": "0.222800426613502081500",
+      "net_pnl_high_mark_boundary_only": "0.315327059421145248625",
+      "isolated_margin_min_buffer_current_mmr_stress": "579.871451540609941125375",
+      "funding_cost_recovery_days_ex_post_target": 29.0,
+      "drawdown_usdt_hourly_proxy": "4.087342274283752590625"
+    },
+    {
+      "coin": "BTC",
+      "start": "2026-08-27",
+      "split": "sealed",
+      "net_pnl_proxy": "-0.196356264918954274375",
+      "funding_proxy": "3.911352200168045725625",
+      "price_pnl": "0.012170069864",
+      "fees": "2.4718210764168720",
+      "slippage": "1.6472265604141280",
+      "net_pnl_low_mark_boundary_only": "-0.207483146516653163646",
+      "net_pnl_high_mark_boundary_only": "-0.131652486335147736571",
+      "isolated_margin_min_buffer_current_mmr_stress": "714.084591923219379371962",
+      "funding_cost_recovery_days_ex_post_target": null,
+      "drawdown_usdt_hourly_proxy": "4.151441281110886141331"
+    },
+    {
+      "coin": "ETH",
+      "start": "2026-06-28",
+      "split": "development",
+      "net_pnl_proxy": "-2.355563220999807544467",
+      "funding_proxy": "1.927373208095192455533",
+      "price_pnl": "0.11169674136",
+      "fees": "2.636617088813460",
+      "slippage": "1.757084937201540",
+      "net_pnl_low_mark_boundary_only": "-2.366936716461197164233",
+      "net_pnl_high_mark_boundary_only": "-2.328158664509475283578",
+      "isolated_margin_min_buffer_current_mmr_stress": "590.382438865453815005561",
+      "funding_cost_recovery_days_ex_post_target": null,
+      "drawdown_usdt_hourly_proxy": "4.104913456582000286121"
+    },
+    {
+      "coin": "ETH",
+      "start": "2026-07-28",
+      "split": "validation",
+      "net_pnl_proxy": "-0.657168801291592908244",
+      "funding_proxy": "3.841742944648407091756",
+      "price_pnl": "0.[REDACTED_PHONE]",
+      "fees": "2.785174387043555",
+      "slippage": "1.856125346006445",
+      "net_pnl_low_mark_boundary_only": "-0.669515630607418861966",
+      "net_pnl_high_mark_boundary_only": "-0.555485555095770745982",
+      "isolated_margin_min_buffer_current_mmr_stress": "519.474934129827992951390",
+      "funding_cost_recovery_days_ex_post_target": null,
+      "drawdown_usdt_hourly_proxy": "4.137455295635982659540"
+    },
+    {
+      "coin": "ETH",
+      "start": "2026-08-27",
+      "split": "sealed",
+      "net_pnl_proxy": "-0.711984220458796021920",
+      "funding_proxy": "3.368608127936203978080",
+      "price_pnl": "0.05418584880",
+      "fees": "2.480172604134690",
+      "slippage": "1.652772463640310",
+      "net_pnl_low_mark_boundary_only": "-0.723866901274217539044",
+      "net_pnl_high_mark_boundary_only": "-0.608651351372630270028",
+      "isolated_margin_min_buffer_current_mmr_stress": "702.587164340806004713148",
+      "funding_cost_recovery_days_ex_post_target": null,
+      "drawdown_usdt_hourly_proxy": "4.151806814670000"
+    }
+  ]
+}

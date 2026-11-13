@@ -1,0 +1,11 @@
+# 阶段020：闭合九币评价准备（未运行）
+
+有限准备通过，3项必要适配测试PASS，future/AI结果null。只复制017原八规则、v12容量/13对照原字节，九规格来自job008注册表与018真实public原件。未读取livegzip或计算收益，没有source/模型/配置新增。
+
+500独立容量、15s主/5与30诊断、五delay、5/10bps每腿、原35s冷却和cost/volume门槛不变。LEAD仍ETH/SOL。模型V3.1仍原六registry，PEPE/WIF/BONK尚未schema/API验证，不能将数值评价准备称九币模型接入通过。
+
+protocol保留规则早于source的边界。当前V3.1于20:42:39冻结，早于008的21:13:13起采；真实缺口是新增三币registry未验证，而非schema晚于当前源。wrapper完整代码cut21:17:27晚于source，其clock原件保持不变；更早proto准备采样不作codecut，文案修正时间不冒充旧codecut。旧007 terminal binding字段修为null，当前008尚无该回执。producer只能在真实STOPPED+原session/PID终态及完整gzip CRC/EOF/count/hash/18data频道后注册sourcehash，下一有限scope才执行；当前没有execution结果。accept_terminal区分含ACK频道计数和实际data，原run/boot/domain/ordinal约束保留。
+
+原017交易/evaluation脚本仍逐字节不动。新的publication_wrapper.py只按当前protocol＋真实source identity计算status/run/source start、规则与schema前后关系，调用原数值程序后自动覆盖旧017发布元数据，不依赖结果修改时间。正式执行入口是该wrapper，当前mode仍PREPARE_ONLY拒绝运行；terminal且另行scope授权后才改mode并冻结。2项必要metadata测试通过，保留before_publication_wrapper原文件，新actual代码clock单列publication_wrapper_clock_receipt；原21:17:27主代码cut不动，不能将新修正文案时点伪装旧cut。规则/core/数值字节未改，live收益未读。
+
+预冻结索引pre_terminal_code_freeze，原quote及新门槛审计入口备好，但真实quote审核尚未运行。准备不是策略/时延/盈利验收，完整市场/真实费用/融资/撮合仍UNKNOWN。job008原PID54627/session57237至21:58:13UTC或bytecap继续，源码不改、不重启。总12h ACTIVE，等待不计主动研究工时。

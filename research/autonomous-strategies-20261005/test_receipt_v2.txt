@@ -1,0 +1,29 @@
+test_async_entries_preserve_cash_reserve (test_engine.EngineTests) ... ok
+test_decimal_slippage_at_exact_tick_boundary (test_engine.EngineTests) ... ok
+test_double_cost_and_cash_conservation (test_engine.EngineTests) ... ok
+test_execution_delay (test_engine.EngineTests) ... ok
+test_future_perturbation_does_not_change_history (test_engine.EngineTests) ... ok
+test_no_hourly_rebalance_or_overlapping_entries (test_engine.EngineTests) ... ok
+test_only_completed_4h_bar (test_engine.EngineTests) ... ok
+test_rejected_orders_have_no_virtual_holdings (test_engine.EngineTests) ... ok
+test_reversion_hold_and_no_same_bar_reentry (test_engine.EngineTests) ... ok
+test_rotation_cap_and_invalid_features (test_engine.EngineTests) ... ok
+test_cost_delay_failure_cannot_be_hidden (test_evaluate.GateTests) ... ok
+test_development_does_not_select_winner (test_evaluate.GateTests) ... ok
+test_duplicate_cost_condition_rejected (test_evaluate.GateTests) ... ok
+test_inadequate_sample_and_unknown_fail (test_evaluate.GateTests) ... ok
+test_rank_and_no_multiple_family_winners (test_evaluate.GateTests) ... ok
+test_bad_candles_rejected (test_replay.IndependentPrimitives) ... ok
+test_close_bar_availability_and_no_future_input (test_replay.IndependentPrimitives) ... ok
+test_decimal_rounding_and_adverse_slip (test_replay.IndependentPrimitives) ... ok
+test_independent_drawdown_includes_initial_equity (test_replay.IndependentPrimitives) ... ok
+test_zero_volume_blocks_complete_rotation_dependency (test_replay.IndependentPrimitives) ... ok
+test_all_three_families_and_controls (test_replay.LedgerCrossCheck) ... ok
+test_lot_minimum_rejection_and_dust (test_replay.LedgerCrossCheck) ... ok
+test_mutated_cash_signal_price_and_metric_fail_closed (test_replay.LedgerCrossCheck) ... ok
+test_zero_guard_and_trading_period_hard_failure (test_replay.LedgerCrossCheck) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.896s
+
+OK

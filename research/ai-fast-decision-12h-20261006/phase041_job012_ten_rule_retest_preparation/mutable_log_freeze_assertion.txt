@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Volumes/EXTERNAL/量化/research/ai-fast-decision-12h-20261006/phase041_job012_ten_rule_retest_preparation/closed_retest.py", line 25, in <module>
+    if __name__=='__main__':main()
+  File "/Volumes/EXTERNAL/量化/research/ai-fast-decision-12h-20261006/phase041_job012_ten_rule_retest_preparation/closed_retest.py", line 16, in main
+    for n,h in freeze['hashes'].items():assert hashlib.sha256((P/n).read_bytes()).hexdigest()==h
+AssertionError

@@ -1,0 +1,22 @@
+L184: In the cite77†OnDeinit function, we check if the Moving Average handle "maHandle" is valid (i.e., not equal to INVALID_HANDLE). If it is valid, we release the handle by calling the cite78†IndicatorRelease function to free up resources. We can now graduate to the main event handler, cite79†OnTick , where we will base our whole control logic.
+L189:     void OnTick(){
+L191:        datetime currentTime = TimeCurrent();              //--- Retrieve current time
+L233:              ordersPlaced    = false;                     //--- Reset flag for order placement for the new session
+L237: In the Expert tick function OnTick, we first call cite80†TimeCurrent to retrieve the current server time and then convert it into a cite81†MqlDateTime structure using the cite82†TimeToStruct function so we can access its components. We compare the current hour and minute with the user-defined "SessionEndHour" and "SessionEndMinute"; if the current time is at or past the session end, we build a "sesEnd" structure and convert it to a datetime using cite83†StructToTime .
+L238: Based on whether the session start before or after the session end, we determine the proper "sessionStart" time (using today's date or adjusting for an overnight session), and if this "sessionEnd" is different from "lastBoxSessionEnd", we call the "ComputeBox" function to recalculate the session box while updating "lastBoxSessionEnd" and resetting our "boxCalculated" and "ordersPlaced" flags. We use a custom function to compute the box properties, and here is its code snippet.
+L245:     void ComputeBox(datetime sessionStart, datetime sessionEnd){
+L253:        int copied = CopyRates(_Symbol, BoxTimeframe, 0, totalBars, rates); //--- Copy bar data into array
+L262:        BoxHighTime = 0;                                  //--- Reset stored high time
+L263:        BoxLowTime  = 0;                                  //--- Reset stored low time
+L267:           if(rates[i].time >= sessionStart && rates[i].time <= sessionEnd){
+L268:              if(rates[i].high > highVal){
+L269:                 highVal = rates[i].high;                //--- Update highest price
+L270:                 BoxHighTime = rates[i].time;            //--- Record time of highest price
+L272:              if(rates[i].low < lowVal){
+L273:                 lowVal = rates[i].low;                  //--- Update lowest price
+L274:                 BoxLowTime = rates[i].time;             //--- Record time of lowest price
+L282:        BoxHigh = highVal;                                //--- Store final highest price
+L283:        BoxLow  = lowVal;                                 //--- Store final lowest price
+L284:        Print("Session box computed: High = ", BoxHigh, " at ", TimeToString(BoxHighTime),
+L285:              ", Low = ", BoxLow, " at ", TimeToString(BoxLowTime)); //--- Output computed session box data
+L290: Here, we define a cite84†void "ComputeBox" function to calculate the session extremes. We begin by obtaining the total number of bars on the specified timeframe using the cite85†Bars function and then copy the bar data into a cite86†MqlRates array using the cite87†CopyRates function. We initialize the variable "highVal" to cite88†-DBL_MAX and "lowVal" to cite88†DBL_MAX to ensure that any valid price will update these extremes.

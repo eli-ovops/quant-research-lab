@@ -1,0 +1,1 @@
+{"phase": "preseal", "scenarios": 18, "hashes": 42, "max_error": 0.0}

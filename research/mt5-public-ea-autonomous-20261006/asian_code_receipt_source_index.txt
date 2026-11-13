@@ -1,0 +1,87 @@
+L370:     if(boxCalculated && !ordersPlaced && currentTime < tradeExitTime){
+L373:        if(CopyBuffer(maHandle, 0, 0, 1, maBuffer) <= 0){  //--- Copy 1 value from the MA buffer
+L382:        double offsetPrice = BreakoutOffsetPips * _Point; //--- Convert pips to price units
+L386:           double entryPrice = BoxHigh + offsetPrice; //--- Set entry price just above the session high
+L387:           double stopLoss   = BoxLow - offsetPrice;    //--- Set stop loss below the session low
+L389:           double takeProfit = entryPrice + risk * RiskToReward; //--- Calculate take profit using risk/reward ratio
+L390:           if(obj_Trade.BuyStop(LotSize, entryPrice, _Symbol, stopLoss, takeProfit, ORDER_TIME_GTC, 0, "Asian Breakout EA")){
+L392:              ordersPlaced = true;                        //--- Set flag indicating an order has been placed
+L400:           double entryPrice = BoxLow - offsetPrice;  //--- Set entry price just below the session low
+L401:           double stopLoss   = BoxHigh + offsetPrice;   //--- Set stop loss above the session high
+L403:           double takeProfit = entryPrice - risk * RiskToReward; //--- Calculate take profit using risk/reward ratio
+L404:           if(obj_Trade.SellStop(LotSize, entryPrice, _Symbol, stopLoss, takeProfit, ORDER_TIME_GTC, 0, "Asian Breakout EA")){
+L406:              ordersPlaced = true;                       //--- Set flag indicating an order has been placed
+L413: Here, we build the trade exit time by declaring a cite81†MqlDateTime structure named "exitTimeStruct". We then use the cite82†TimeToStruct function to decompose the current time into its parts and assign the user-defined "TradeExitHour" and "TradeExitMinute" (with seconds set to 0) to "exitTimeStruct". Next, we convert this structure back to a datetime value by calling the cite83†StructToTime function, resulting in "tradeExitTime".
+L414: After that, if the session box has been calculated, no orders have been placed, and the current time is before "tradeExitTime", we proceed to place orders.
+L415: We declare an array "maBuffer" to hold cite75†moving average values and call the cite101†ArraySetAsSeries function to ensure that the array is indexed with the newest data first. Then, we use the cite102†CopyBuffer function to retrieve the latest value from the moving average indicator (using "maHandle") into "maBuffer". We compare this moving average value with the current bid price (obtained via the cite103†SymbolInfoDouble function) to determine whether the market is bullish or bearish.
+L416: Based on this condition, we calculate the appropriate entry price, stop loss, and take profit using the "BreakoutOffsetPips" parameter, and then we place either a Buy Stop order using the "obj_Trade.BuyStop" method or a Sell Stop order using the "obj_Trade.SellStop" method.
+L417: Finally, we print a confirmation message if the order is successfully placed or an error message if it fails, and we set the "ordersPlaced" flag accordingly. On running the program, we get the following result.
+L423:     if(currentTime >= tradeExitTime){
+L427:        ordersPlaced  = false;                         //--- Reset order placed flag
+L429: Here, we check whether the current time has reached or surpassed the trade exit time. If it has, we call the "CloseOpenPositions" function to close all open positions associated with the EA, and then we call the "CancelPendingOrders" function to cancel any pending orders. After these functions execute, we reset the "boxCalculated" and "ordersPlaced" flags to false, preparing the program for a new session. The custom functions we use are as follows.
+L434:     void CloseOpenPositions(){
+L440:                 if(!obj_Trade.PositionClose(ticket))        //--- Attempt to close position
+L453:     void CancelPendingOrders(){
+L123:     int maHandle = INVALID_HANDLE;                         //--- Global MA handle
+L127:     input double         LotSize              = 0.1;         //--- Trade lot size
+L128:     input double         BreakoutOffsetPips   = 10;          //--- Offset in pips for pending orders
+L129:     input ENUM_TIMEFRAMES BoxTimeframe         = PERIOD_M15;  //--- Timeframe for box calculation (15 or 30 minutes)
+L130:     input int            MA_Period            = 50;          //--- Moving average period for trend filter
+L131:     input ENUM_MA_METHOD MA_Method            = MODE_SMA;    //--- MA method (Simple Moving Average)
+L132:     input ENUM_APPLIED_PRICE MA_AppliedPrice   = PRICE_CLOSE; //--- Applied price for MA (Close price)
+L133:     input double         RiskToReward         = 1.3;         //--- Reward-to-risk multiplier (1:1.3)
+L134:     input int            MagicNumber          = 12345;       //--- Magic number (used for order identification)
+L137:     input int            SessionStartHour     = 23;          //--- Session start hour
+L138:     input int            SessionStartMinute   = 00;           //--- Session start minute
+L139:     input int            SessionEndHour       = 03;           //--- Session end hour
+L140:     input int            SessionEndMinute     = 00;           //--- Session end minute
+L141:     input int            TradeExitHour        = 13;          //--- Trade exit hour
+L142:     input int            TradeExitMinute      = 00;           //--- Trade exit minute
+L147:     bool     ordersPlaced      = false;                    //--- Flag: true if orders have been placed for the session
+L148:     double   BoxHigh           = 0.0;                        //--- Highest price during the session
+L149:     double   BoxLow            = 0.0;                        //--- Lowest price during the session
+L151:     datetime BoxHighTime       = 0;                          //--- Time when the highest price occurred
+L152:     datetime BoxLowTime        = 0;                          //--- Time when the lowest price occurred
+L153: Here, we include the trade library using "cite71†#include <Trade\Trade.mqh>" to access built-in trading functions and create a global trade object named "obj_Trade".
+L154: We define a global indicator handle "maHandle", initialize it to cite72†INVALID_HANDLE and set up user inputs for trade and indicator settings—such as "LotSize", "BreakoutOffsetPips", and "BoxTimeframe" (which uses the cite73†ENUM_TIMEFRAMES type)—as well as parameters for the moving average ("MA_Period", "MA_Method", "MA_AppliedPrice") and risk management ("RiskToReward", "MagicNumber").
+L155: Additionally, we allow users to specify session timing in hours and minutes (using inputs like "SessionStartHour", "SessionStartMinute", "SessionEndHour", "SessionEndMinute", "TradeExitHour", and "TradeExitMinute") and declare global variables to store the session box data ("BoxHigh", "BoxLow") and the exact times these extremes occurred ("BoxHighTime", "BoxLowTime"), along with flags ("boxCalculated" and "ordersPlaced") to control the program’s logic.
+L165:        maHandle = iMA(_Symbol, 0, MA_Period, 0, MA_Method, MA_AppliedPrice); //--- Create MA handle
+L166:        if(maHandle == INVALID_HANDLE){                     //--- Check if MA handle creation failed
+L172: In the OnInit event handler, we set the trade object's magic number by calling the "obj_Trade.SetExpertMagicNumber(MagicNumber)" method, ensuring that all trades are uniquely identified. Next, we create the cite67†Moving Average†www.metatrader5.com handle using the cite75†iMA function with our user-defined parameters ("MA_Period", "MA_Method", and "MA_AppliedPrice").
+L173: We then verify whether the handle was successfully created by checking if "maHandle" equals cite72†INVALID_HANDLE ; if it does, we print an error message and return cite76†INIT_FAILED , otherwise, we return cite76†INIT_SUCCEEDED to signal successful initialization. Next, we need to release the created handle to save resources when the program is not in use.
+L178:     void OnDeinit(const int reason){
+L180:        if(maHandle != INVALID_HANDLE)                     //--- Check if MA handle exists
+L181:           IndicatorRelease(maHandle);                     //--- Release the MA handle
+L184: In the cite77†OnDeinit function, we check if the Moving Average handle "maHandle" is valid (i.e., not equal to INVALID_HANDLE). If it is valid, we release the handle by calling the cite78†IndicatorRelease function to free up resources. We can now graduate to the main event handler, cite79†OnTick , where we will base our whole control logic.
+L189:     void OnTick(){
+L191:        datetime currentTime = TimeCurrent();              //--- Retrieve current time
+L367:     datetime tradeExitTime = StructToTime(exitTimeStruct); //--- Convert exit time structure to datetime
+L370:     if(boxCalculated && !ordersPlaced && currentTime < tradeExitTime){
+L373:        if(CopyBuffer(maHandle, 0, 0, 1, maBuffer) <= 0){  //--- Copy 1 value from the MA buffer
+L382:        double offsetPrice = BreakoutOffsetPips * _Point; //--- Convert pips to price units
+L386:           double entryPrice = BoxHigh + offsetPrice; //--- Set entry price just above the session high
+L387:           double stopLoss   = BoxLow - offsetPrice;    //--- Set stop loss below the session low
+L389:           double takeProfit = entryPrice + risk * RiskToReward; //--- Calculate take profit using risk/reward ratio
+L390:           if(obj_Trade.BuyStop(LotSize, entryPrice, _Symbol, stopLoss, takeProfit, ORDER_TIME_GTC, 0, "Asian Breakout EA")){
+L392:              ordersPlaced = true;                        //--- Set flag indicating an order has been placed
+L400:           double entryPrice = BoxLow - offsetPrice;  //--- Set entry price just below the session low
+L401:           double stopLoss   = BoxHigh + offsetPrice;   //--- Set stop loss above the session high
+L403:           double takeProfit = entryPrice - risk * RiskToReward; //--- Calculate take profit using risk/reward ratio
+L404:           if(obj_Trade.SellStop(LotSize, entryPrice, _Symbol, stopLoss, takeProfit, ORDER_TIME_GTC, 0, "Asian Breakout EA")){
+L406:              ordersPlaced = true;                       //--- Set flag indicating an order has been placed
+L413: Here, we build the trade exit time by declaring a cite81†MqlDateTime structure named "exitTimeStruct". We then use the cite82†TimeToStruct function to decompose the current time into its parts and assign the user-defined "TradeExitHour" and "TradeExitMinute" (with seconds set to 0) to "exitTimeStruct". Next, we convert this structure back to a datetime value by calling the cite83†StructToTime function, resulting in "tradeExitTime".
+L414: After that, if the session box has been calculated, no orders have been placed, and the current time is before "tradeExitTime", we proceed to place orders.
+L415: We declare an array "maBuffer" to hold cite75†moving average values and call the cite101†ArraySetAsSeries function to ensure that the array is indexed with the newest data first. Then, we use the cite102†CopyBuffer function to retrieve the latest value from the moving average indicator (using "maHandle") into "maBuffer". We compare this moving average value with the current bid price (obtained via the cite103†SymbolInfoDouble function) to determine whether the market is bullish or bearish.
+L416: Based on this condition, we calculate the appropriate entry price, stop loss, and take profit using the "BreakoutOffsetPips" parameter, and then we place either a Buy Stop order using the "obj_Trade.BuyStop" method or a Sell Stop order using the "obj_Trade.SellStop" method.
+L417: Finally, we print a confirmation message if the order is successfully placed or an error message if it fails, and we set the "ordersPlaced" flag accordingly. On running the program, we get the following result.
+L423:     if(currentTime >= tradeExitTime){
+L427:        ordersPlaced  = false;                         //--- Reset order placed flag
+L427:        ordersPlaced  = false;                         //--- Reset order placed flag
+L429: Here, we check whether the current time has reached or surpassed the trade exit time. If it has, we call the "CloseOpenPositions" function to close all open positions associated with the EA, and then we call the "CancelPendingOrders" function to cancel any pending orders. After these functions execute, we reset the "boxCalculated" and "ordersPlaced" flags to false, preparing the program for a new session. The custom functions we use are as follows.
+L434:     void CloseOpenPositions(){
+L440:                 if(!obj_Trade.PositionClose(ticket))        //--- Attempt to close position
+L453:     void CancelPendingOrders(){
+L461:                 if(!obj_Trade.OrderDelete(ticket))         //--- Attempt to delete pending order
+L470: We then check if the position's cite108†POSITION_MAGIC value matches our user-defined "MagicNumber" to ensure it belongs to our EA; if it does, we attempt to close the position using the "obj_Trade.PositionClose" function and print a confirmation message or an error message (using "obj_Trade.ResultRetcodeDescription") based on the outcome.
+L472: If both conditions are met, we attempt to cancel the order using the "obj_Trade.OrderDelete" function, printing either a success message or an error message based on whether the cancellation succeeds. Upon running the program, we get the following results.
+L488:     void applyTrailingSTOP(double slPoints, CTrade &trade_object,int magicNo=0){

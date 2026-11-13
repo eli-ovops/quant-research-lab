@@ -1,0 +1,29 @@
+test_adverse_extreme_maintenance_beats_profitable_close (test_engine.EngineTests) ... ok
+test_controls_same_family_parameter_and_cost_seed (test_engine.EngineTests) ... ok
+test_funding_before_open_gap_breach_overrides_target (test_engine.EngineTests) ... ok
+test_future_perturbation_all_six_families (test_engine.EngineTests) ... ok
+test_hold_bar_exit_and_terminal_proxy (test_engine.EngineTests) ... ok
+test_martingale_three_losses_stop_and_stakes (test_engine.EngineTests) ... ok
+test_minimum_invalid_and_prepared (test_engine.EngineTests) ... ok
+test_multitrade_cap_cooldown_dust_and_costs (test_engine.EngineTests) ... ok
+test_no_account_stop250_trade_stop_and_gap_still_apply (test_engine.EngineTests) ... ok
+test_precision (test_engine.EngineTests) ... ok
+test_registered_rule_maps_future_and_control_atr (test_engine.EngineTests) ... ok
+test_seven_day_entry_cap40 (test_engine.EngineTests) ... ok
+test_swap_funding_by_trade_long_and_short (test_engine.EngineTests) ... ok
+test_target_queued_exit_next_open_and_no_restart (test_engine.EngineTests) ... ok
+test_twenty_leverage_sizing_and_spec_support_gate (test_engine.EngineTests) ... ok
+test_continuous_balance_dust_cooldown_and_caps (test_audit.AuditTests) ... ok
+test_conversion_catches_never_swallow_audit_rejections (test_audit.AuditTests) ... ok
+test_independent_leverage_rejection_and_gate_tamper (test_audit.AuditTests) ... ok
+test_invalid_gate_spec_funding_and_missing_warmup (test_audit.AuditTests) ... ok
+test_martingale_three_losses_and_gain_reset (test_audit.AuditTests) ... ok
+test_proxy_precedence_short_and_funding_terminal (test_audit.AuditTests) ... ok
+test_registered_maps_and_random64_multi_ledgers (test_audit.AuditTests) ... ok
+test_tampered_reentry_budget_cash_atr_pnl_and_unknown (test_audit.AuditTests) ... ok
+test_twenty_leverage_keeps_position_below250_until_terminal (test_audit.AuditTests) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.078s
+
+OK
